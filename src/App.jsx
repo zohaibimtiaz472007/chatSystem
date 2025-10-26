@@ -157,9 +157,8 @@ export default function App() {
       <div className="text-xs px-4 py-1 text-gray-400 border-b border-gray-800 bg-gray-950/80">
         Status:{" "}
         <span
-          className={`${
-            health?.includes("running") ? "text-green-400" : "text-red-400"
-          }`}
+          className={`${health?.includes("running") ? "text-green-400" : "text-red-400"
+            }`}
         >
           {health || "Checking..."}
         </span>
@@ -184,21 +183,19 @@ export default function App() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2 }}
-              className={`flex items-start gap-3 ${
-                msg.sender === "You" ? "justify-end" : "justify-start"
-              }`}
+              className={`flex items-start gap-3 ${msg.sender === "You" ? "justify-end" : "justify-start"
+                }`}
             >
               {msg.sender !== "You" && (
                 <Bot
-                  className={`w-6 h-6 mt-1 ${
-                    msg.model === "gemini"
+                  className={`w-6 h-6 mt-1 ${msg.model === "gemini"
                       ? "text-green-400"
                       : msg.model === "groq"
-                      ? "text-purple-400"
-                      : msg.model === "gpt4"
-                      ? "text-blue-400"
-                      : "text-gray-400"
-                  }`}
+                        ? "text-purple-400"
+                        : msg.model === "gpt4"
+                          ? "text-blue-400"
+                          : "text-gray-400"
+                    }`}
                 />
               )}
               <div
@@ -230,38 +227,40 @@ export default function App() {
       </div>
 
       {/* Input */}
-      <div className="p-4 border-t border-gray-800 flex gap-2 bg-gray-900/70 backdrop-blur-lg">
-        <textarea
-          className="flex-1 bg-gray-950 border border-gray-700 rounded-lg p-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-          rows="1"
-          placeholder="Type a message..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={handleKeyPress}
-          disabled={sending}
-        />
-        <button
-          onClick={sendMessage}
-          disabled={sending}
-          className={`px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition flex items-center gap-2 ${
-            sending ? "opacity-50 cursor-not-allowed" : ""
-          }`}
-        >
-          {sending ? (
-            <>
-              <Loader2 size={18} className="animate-spin" /> Sending...
-            </>
-          ) : (
-            <>
-              <Send size={18} />
-              Send
-            </>
-          )}
-        
-        </button>
-          
+      <div className="p-4 border-t border-gray-800 bg-gray-900/70 backdrop-blur-lg">
+        <div className="flex gap-2">
+          <textarea
+            className="flex-1 bg-gray-950 border border-gray-700 rounded-lg p-2 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+            rows="1"
+            placeholder="Type a message..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={handleKeyPress}
+            disabled={sending}
+          />
+          <button
+            onClick={sendMessage}
+            disabled={sending}
+            className={`px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition flex items-center gap-2 ${sending ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+          >
+            {sending ? (
+              <>
+                <Loader2 size={18} className="animate-spin" /> Sending...
+              </>
+            ) : (
+              <>
+                <Send size={18} />
+                Send
+              </>
+            )}
+          </button>
+        </div>
+        <div className="text-center text-xs text-gray-500 mt-2">
+          💡 Idea given by{" "}
+          <span className="text-blue-400 font-medium">Mohid Ali Abbasi</span>
+        </div>
       </div>
-      
     </div>
   );
 }
