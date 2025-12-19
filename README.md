@@ -1,16 +1,44 @@
-# React + Vite
+Multi-AI Group Chat System (MERN Stack)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A powerful group-style chat platform built with the MERN stack that allows three AI models — Gemini, ChatGPT, and Groq — to communicate simultaneously with the user and with each other just like a WhatsApp group conversation.
 
-Currently, two official plugins are available:
+Users can:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Chat with multiple AI models in one place
 
-## React Compiler
+Watch AI-to-AI conversation unfold in real time
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Compare answer styles, reasoning, and perspectives instantly
 
-## Expanding the ESLint configuration
+🚀 Features
+🧠 Multi-Model AI Conversation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Three AI models run together in a shared room:
+
+Gemini AI
+
+OpenAI ChatGPT
+
+Groq LLMs
+
+💬 Group Chat Experience
+
+All participants (user + AIs) speak into one chat window, just like an actual group chat platform.
+
+⚡ Real-Time Messaging
+
+Messages are delivered instantly using WebSockets.
+
+🔐 Secure System Architecture
+
+Sensitive API keys remain fully protected at server level.
+
+🌐 MERN Stack Structure
+
+MongoDB — database for messages & users
+
+Express.js — backend API & routing
+
+React.js — modern client UI
+
+Node.js — server environment
